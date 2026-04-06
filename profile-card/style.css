@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* daha sağlıklı ortalama: ekran değişse bile ortada kalır
+mobilde bozulmaz
+gerçek projelerde en çok kullanılan yöntemlerden biridir
+margin hack’lerine ihtiyaç kalmaz */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2C2C2C;
+    font-family: "Poppins", sans-serif;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #faf3f3;
+    border-radius: 10px;
+    overflow: hidden; /* card'ın sınırları dışındaki her şeyi kes. */
+}
+.banner{
+    height: 100px;
+    background-image: url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+.banner-icon{
+    position: absolute;
+    top: 21px;
+    right: 20px;
+    font-size: 18px;
+    color: #41431B;
+    cursor: pointer;
+}
+
+.card .profile-pic{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.card-content{
+    margin-top: 60px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.card-content .name{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.card-content h5{
+    font-size: 12px;
+    font-weight: 200;
+    margin-bottom: 3px;
+}
+
+.card-content h3{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.card-content h4{
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* ortala */
+    gap: 20px;               /* ikonlar arası boşluk */
+    margin-top: 15px;        /* yazılardan biraz boşluk */
+}
+
+.social-icons i {
+    font-size: 18px;
+    color: #2F6B3F;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #1c3f2a; /* hover efekti */
+}
